@@ -22,7 +22,7 @@ public class TimeConversion {
             }
 
         }
-        System.out.println(hh+rest);
+        System.out.println(hh + rest);
     }
 
 }

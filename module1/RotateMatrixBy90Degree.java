@@ -19,14 +19,14 @@ public class RotateMatrixBy90Degree
         }
 
         
-        int innerJ = n-1;
+        int l = n-1;
         for(int i = 0; i < originalArray.length ; i++){
-            int innerI = 0;
+            int k = 0;
             for(int j = 0 ; j < originalArray[i].length ; j++){
-                rotatedArray[innerI][innerJ] = originalArray[i][j];
-                innerI++;
+                rotatedArray[k][l] = originalArray[i][j];
+                k++;
             }
-            innerJ--;
+            l--;
         }
 
         for(int i = 0; i < rotatedArray.length ; i++){

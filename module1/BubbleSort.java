@@ -2,32 +2,32 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
-public class BubbleSortDemo {
+public class BubbleSort {
     public static void main(String[] args) throws java.lang.Exception {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
-        int[] arr = new int[n];
+        int[] a = new int[n];
         for (int i = 0; i < n; i++) {
-            arr[i] = s.nextInt();
+            a[i] = s.nextInt();
         }
-        bubbleSort(arr);
+        bubbleSort(a);
         System.out.println();
-        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(a));
     }
 
-    public static void bubbleSort(int[] arr) {
-        int n = arr.length;
+    public static void bubbleSort(int[] a) {
+        int n = a.length;
         for (int i = 0; i < n - 1; i++) {
             boolean flag = true;
             for (int j = 0; j < n - 1 - i; j++) {
-                if (arr[j] > arr[j + 1]) {
+                if (a[j] > a[j + 1]) {
                     flag = false;
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
+                    int temp = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = temp;
                 }
             }
-            System.out.println("After passing number " + (i + 1) + ":  " + Arrays.toString(arr));
+            System.out.println("After passing number " + (i + 1) + ":  " + Arrays.toString(a));
             System.out.println();
             if (flag == true) {
                 break;
