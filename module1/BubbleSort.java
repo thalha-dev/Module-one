@@ -10,13 +10,7 @@ public class BubbleSort {
         for (int i = 0; i < n; i++) {
             a[i] = s.nextInt();
         }
-        bubbleSort(a);
-        System.out.println();
-        System.out.println(Arrays.toString(a));
-    }
-
-    public static void bubbleSort(int[] a) {
-        int n = a.length;
+        int swaps = 0;
         for (int i = 0; i < n - 1; i++) {
             boolean flag = true;
             for (int j = 0; j < n - 1 - i; j++) {
@@ -25,14 +19,16 @@ public class BubbleSort {
                     int temp = a[j];
                     a[j] = a[j + 1];
                     a[j + 1] = temp;
+                    swaps++;
                 }
             }
-            System.out.println("After passing number " + (i + 1) + ":  " + Arrays.toString(a));
-            System.out.println();
             if (flag == true) {
                 break;
             }
         }
-        return;
+        System.out.println("Array is sorted in " + swaps + " swaps.");
+        System.out.println("First Element: " + a[0]);
+        System.out.println("Last Element: " + a[n - 1]);
     }
+
 }

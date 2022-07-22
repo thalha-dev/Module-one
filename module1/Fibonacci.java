@@ -6,9 +6,7 @@ public class Fibonacci {
     public static void main(String[] args) throws java.lang.Exception {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
-        System.out.println();
-        int ans = fibonacci(n);
-        System.out.println(ans);
+        System.out.println(fibonacci(n));
     }
 
     public static int fibonacci(int n) {
