@@ -15,11 +15,11 @@ public class PrintSumRows {
         }
 
         for (int i = 0; i < n; i++) {
-            int sum = 0;
+            int total = 0;
             for (int j = 0; j < m; j++) {
-                sum += arr[i][j];
+                total += arr[i][j];
             }
-            System.out.println(sum);
+            System.out.println(total);
         }
 
     }

@@ -1,33 +1,30 @@
-import java.util.*;
-import java.lang.*;
 import java.io.*;
+import java.util.*;
 
-public class Main
-{
-	public static void main (String[] args) throws java.lang.Exception
-	{
-        Scanner s = new Scanner(System.in);
-        int t = s.nextInt();
+public class AngryProfessor {
+  public static void main(String[] args) throws java.lang.Exception {
+    Scanner s = new Scanner(System.in);
+    int t = s.nextInt();
 
-        for(int i=0; i<t; i++){
-            int n = s.nextInt();
-            int k = s.nextInt();
-            int a[] = new int[n];
-            
-            int ontime=0;
+    for (int i = 0; i < t; i++) {
+      int n = s.nextInt();
+      int k = s.nextInt();
+      int a[] = new int[n];
 
-            for(int j=0; j<n; j++){
-                a[j] = s.nextInt();
+      int ontime = 0;
 
-                if(a[j] <= 0){
-                    ontime++;
-                }
-            }
-            if(ontime>=k){
-                System.out.println("NO");
-            }else{
-                System.out.println("YES");
-            }
+      for (int j = 0; j < n; j++) {
+        a[j] = s.nextInt();
+
+        if (a[j] <= 0) {
+          ontime++;
         }
-	}
+      }
+      if (ontime >= k) {
+        System.out.println("NO");
+      } else {
+        System.out.println("YES");
+      }
+    }
+  }
 }
