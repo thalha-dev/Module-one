@@ -1,6 +1,5 @@
-import java.util.*;
-import java.lang.*;
-import java.io.*;
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class SelectionSort {
     public static void main(String[] args) throws java.lang.Exception {
@@ -22,9 +21,12 @@ public class SelectionSort {
         int n = arr.length;
         for (int i = 0; i < n - 1; i++) {
             int minIndex = i;
+            System.out.println("minIndex at enterance : "+ minIndex + " which is == i :" + i);
             for (int j = i + 1; j < n; j++) {
+                System.out.println("j value : " + j);
                 if (arr[j] < arr[minIndex]) {
                     minIndex = j;
+                    System.out.println("minIndex changed to : "+ minIndex);
                 }
             }
             int temp = arr[i];
